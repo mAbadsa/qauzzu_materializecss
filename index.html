@@ -303,10 +303,10 @@
           </div>
         </div>
       </div>
-      <div class="footer-copyright deep-purple darken-1">
+      <div class="footer-copyright deep-purple darken-1" id="footer">
         <div class="container">
-        Quazzu &copy; 2019
-        <a class="grey-text text-lighten-4 right" href="#!">Trems & Conditions</a>
+          Quazzu &copy; <span class="publish-date"></span>
+          <a class="grey-text text-lighten-4 right" href="#!">Trems & Conditions</a>
         </div>
       </div>
     </footer>
@@ -355,6 +355,10 @@
         //Init Login Model
         $('.modal').modal();
       });
+    </script>
+    <script>
+      const $footer = document.querySelector('#footer .publish-date');
+      $footer.innerHTML = new Date().getFullYear();
     </script>
   </body>
 </html>
