@@ -198,7 +198,7 @@
       </div>
       <div class="footer-copyright deep-purple darken-1">
         <div class="container">
-          Quazzu &copy; 2019
+          Quazzu &copy; <span class="publish-date"></span>
           <a class="grey-text text-lighten-4 right" href="#!"
             >Trems & Conditions</a
           >
@@ -226,6 +226,10 @@
         //Init Select
         $('select').material_select();
       });
+    </script>
+    <script>
+      const $footer = document.querySelector('#footer .publish-date');
+      $footer.innerHTML = new Date().getFullYear();
     </script>
   </body>
 </html>
